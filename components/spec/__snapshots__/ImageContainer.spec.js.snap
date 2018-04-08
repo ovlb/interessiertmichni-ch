@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageContainer match HTML structure 1`] = `
+<figure
+  class="image-container"
+>
+  <img
+    alt="This is an alt text."
+    class="image-container__image"
+    src="/i/2341.gif"
+  />
+   
+  <p
+    class="monospaced image-container__link"
+  >
+    https://www.interessiertmichni.ch/i/2341.gif
+  </p>
+</figure>
+`;
