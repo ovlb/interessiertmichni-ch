@@ -1,0 +1,44 @@
+{
+  "name": "interessiertmichni.ch",
+  "version": "1.0.0",
+  "description": "I don’t care.",
+  "author": "Oscar <o@ovlb.net>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "test": "jest",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "nuxt": "^1.4.0"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.13",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "jest": "^22.4.3",
+    "vue-jest": "^2.3.0"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    }
+  }
+}
