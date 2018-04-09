@@ -52,6 +52,9 @@ export default {
   },
   methods: {
     onButtonClick () {
+      this.currentImage = this.nextImage
+      this.setNextImage()
+    },
     setNextImage () {
       const i = getRandomIndex(this.imageCount)
       const img = this.$store.state.images[i]
