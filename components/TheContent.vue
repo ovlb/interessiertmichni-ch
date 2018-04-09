@@ -2,15 +2,17 @@
   <section class="content">
     <image-container
       v-if="currentImage"
+      :img-id="currentImage.id"
       :file="currentImage.file"
       :alt="currentImage.alt"
     />
     <the-placeholder v-else />
     <section class="app-control">
-      <button
-        @click="onButtonClick"
+      <a
+        @click.prevent="onButtonClick"
+        :href="imageLink"
         aria-label="Neues Bild laden"
-        class="app-icon app-icon--reload"
+        class="app-icon app-icon--reload js-reload"
       />
     </section>
   </section>
@@ -29,33 +31,39 @@ export default {
   data () {
     return {
       imageCount: this.$store.state.images.length,
-      shadowCurrentImage: null
+      nextImage: null
     }
   },
   computed: {
     currentImage: {
       get () {
-        return this.shadowCurrentImage
+        return this.$store.state.currentImage
       },
       set (newImage) {
-        this.$router.push({ path: `/${newImage.id}` })
-        this.shadowCurrentImage = newImage
+        if (this.currentImage) {
+          this.$router.push({ path: `/${newImage.id}/` })
+        }
+        this.$store.state.currentImage = newImage
       }
+    },
+    imageLink () {
+      return (this.nextImage) ? `/${this.nextImage.id}/` : '/'
     }
   },
   methods: {
     onButtonClick () {
-      const i = getRandomIndex(this.imageCount)
-      const newImage = this.$store.state.images[i]
-
-      if (newImage.id === this.currentImage.id) {
-        this.onButtonClick()
-      } else {
-        this.currentImage = newImage
-      }
+      this.currentImage = this.nextImage
+      this.setNextImage()
     },
-    pushImageRoute (id) {
+    setNextImage () {
+      const i = getRandomIndex(this.imageCount)
+      const img = this.$store.state.images[i]
 
+      if (img === this.currentImage) {
+        this.setNextImage()
+      } else {
+        this.nextImage = img
+      }
     }
   },
   mounted () {
@@ -69,6 +77,8 @@ export default {
       const i = getRandomIndex(this.imageCount)
       newImage = images[i]
     }
+
+    this.setNextImage()
 
     this.currentImage = newImage
   }
