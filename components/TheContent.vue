@@ -45,6 +45,9 @@ export default {
         }
         this.$store.state.currentImage = newImage
       }
+    },
+    imageLink () {
+      return (this.nextImage) ? `/${this.nextImage.id}/` : '/'
     }
   },
   methods: {
