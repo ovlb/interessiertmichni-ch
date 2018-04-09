@@ -10,10 +10,6 @@ exports[`ImageContainer match HTML structure 1`] = `
     src="/i/2341.gif"
   />
    
-  <p
-    class="monospaced image-container__link"
-  >
-    https://www.interessiertmichni.ch/i/2341.gif
-  </p>
+  <!---->
 </figure>
 `;

@@ -5,13 +5,19 @@
       :alt="alt"
       class="image-container__image"
     >
-    <p class="monospaced image-container__link">{{ imageLink }}</p>
+    <image-link :img-id="imgId"/>
   </figure>
 </template>
 
 <script>
+import ImageLink from './ImageLink.vue'
+
 export default {
   props: {
+    imgId: {
+      type: Number,
+      required: true
+    },
     file: {
       type: String,
       required: true
@@ -21,14 +27,14 @@ export default {
       required: true
     }
   },
+  components: {
+    ImageLink
+  },
   computed: {
     imageSource () {
       return `/i/${this.file}`
-    },
-    imageLink () {
-      return `https://www.interessiertmichni.ch/i/${this.file}`
     }
-  },
+  }
 }
 </script>
 
@@ -48,20 +54,14 @@ export default {
   width: 100%;
 }
 
-.image-container__link {
-  background-color: unset;
-  display: flex;
-  margin-top: -.2rem;
-}
-
 .image-container__link::before {
   background: url(~assets/img/anchor.svg) center no-repeat;
   background-size: contain;
   content: "";
   display: block;
-  flex: 0 0 1rem;
-  width: 1rem;
-  height: 1rem;
+  flex: 0 0 .9rem;
+  width: .9rem;
+  height: .9rem;
   margin-right: .5rem;
 }
 
