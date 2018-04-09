@@ -8,10 +8,11 @@
     />
     <the-placeholder v-else />
     <section class="app-control">
-      <button
-        @click="onButtonClick"
+      <a
+        @click.prevent="onButtonClick"
+        :href="imageLink"
         aria-label="Neues Bild laden"
-        class="app-icon app-icon--reload"
+        class="app-icon app-icon--reload js-reload"
       />
     </section>
   </section>
