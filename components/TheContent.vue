@@ -37,11 +37,13 @@ export default {
   computed: {
     currentImage: {
       get () {
-        return this.shadowCurrentImage
+        return this.$store.state.currentImage
       },
       set (newImage) {
-        this.$router.push({ path: `/${newImage.id}` })
-        this.shadowCurrentImage = newImage
+        if (this.currentImage) {
+          this.$router.push({ path: `/${newImage.id}/` })
+        }
+        this.$store.state.currentImage = newImage
       }
     }
   },
