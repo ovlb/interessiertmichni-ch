@@ -1,3 +1,6 @@
+/**
+ * Export as CommonJS module for compability with nuxt.config
+ */
 const images = [
   {
     id: 199,
@@ -99,6 +102,61 @@ const images = [
     file: '7263871.gif',
     alt: 'Winnie Pooh tanzt fröhlich vor einem Spiegel. Die Bildunterschrift lautet „Look at all the bothers I give.“'
   },
+  {
+    id: 323,
+    file: '323.gif',
+    alt: 'Eine rothaarige Katze liegt auf dem Boden und lässt sich streicheln. Währenddesen rennt eine Schildkröte in ihre Seite. Die Katze interessiert es nicht.'
+  },
+  {
+    id: 9123,
+    file: '9123.gif',
+    alt: 'Rebecca Gayheart sitzt mit Kopf auf einer Hand gestüzt in einem Diner und blinzelt mit den Augen.'
+  },
+  {
+    id: 63,
+    file: '63.gif',
+    alt: 'Eine blonde Frau nippt an ihrem Getränk und guckt dabei fundamental uninteressiert.'
+  },
+  {
+    id: 53456,
+    file: '53456.gif',
+    alt: 'Bill Murray zieht an einer Zigarette und sagt „I don’t about anything.“'
+  },
+  {
+    id: 6562,
+    file: '6562.gif',
+    alt: 'Rigby Raccoon zuckt mit den Schultern und sagt „Whatever, man, I’m just in it for the free meal .“'
+  },
+  {
+    id: 45234,
+    file: '45234.gif',
+    alt: 'Joey Bada$$ lässt mit seinen Händen den Schriftzug „Truly Don’t Care“ erscheinen und lächelt dabei salbungsvoll.'
+  },
+  {
+    id: 56,
+    file: '56.gif',
+    alt: 'Eine gelangweilt guckende, braunhaarige Frau in silbernem Kleid hält einen Revolver in der Hand. Sie betätigt den Abzug und aus dem Lauf entfaltet sich eine Fahne mit der Aufschrift „Over It“'
+  },
+  {
+    id: 5642,
+    file: '5642.gif',
+    alt: 'Eine Szene in einer Sportsbar, die Gäste starren gebannt auf einen Fernseher. Im Bildmittelpunkt sitzt eine Frau mit Brille am Tresen. Alle anderen Gäste reagieren euphorisch auf ein Ereignig, die Frau trinkt gelangweilt ihr Getränk.'
+  },
+  {
+    id: 345,
+    file: '345.gif',
+    alt: 'Kanye West steht während der Video Music Awards 2009 auf der Bühne und zuckt mit den Schultern.'
+  },
+  {
+    id: 213,
+    file: '213.gif',
+    alt: 'Tina Fey zuckt mit den Schultern. Die Bildunterschrift lautet I ain’t even mad.“'
+  },
+  {
+    id: 324,
+    file: '324.gif',
+    alt: 'Jeff Bridges in seiner Rolle als The Dude rührt seinen White Russian um.“'
+  }
 ]
 
 module.exports = images
