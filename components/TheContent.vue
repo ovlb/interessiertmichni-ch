@@ -31,7 +31,7 @@ export default {
   data () {
     return {
       imageCount: this.$store.state.images.length,
-      shadowCurrentImage: null
+      nextImage: null
     }
   },
   computed: {
