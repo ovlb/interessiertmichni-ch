@@ -49,17 +49,15 @@ export default {
   },
   methods: {
     onButtonClick () {
+    setNextImage () {
       const i = getRandomIndex(this.imageCount)
-      const newImage = this.$store.state.images[i]
+      const img = this.$store.state.images[i]
 
-      if (newImage.id === this.currentImage.id) {
-        this.onButtonClick()
+      if (img === this.currentImage) {
+        this.setNextImage()
       } else {
-        this.currentImage = newImage
+        this.nextImage = img
       }
-    },
-    pushImageRoute (id) {
-
     }
   },
   mounted () {
@@ -73,6 +71,8 @@ export default {
       const i = getRandomIndex(this.imageCount)
       newImage = images[i]
     }
+
+    this.setNextImage()
 
     this.currentImage = newImage
   }
