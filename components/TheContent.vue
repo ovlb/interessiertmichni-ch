@@ -2,6 +2,7 @@
   <section class="content">
     <image-container
       v-if="currentImage"
+      :img-id="currentImage.id"
       :file="currentImage.file"
       :alt="currentImage.alt"
     />
