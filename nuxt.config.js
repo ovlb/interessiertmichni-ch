@@ -12,7 +12,13 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'I don’t care.' }
+      { hid: 'description', name: 'description', content: 'I don’t care.' },
+      // Open Graph
+      { property: 'og:image', content: 'https://www.interessiertmichni.ch/nocare-og-image-001.png' },
+      { property: 'og:image:width', content: '2400px' },
+      { property: 'og:image:height', content: '1260px' },
+      { property: 'og:title', content: 'interessiertmichni.ch' },
+      { property: 'og:description', content: '¯\\_(ツ)_/¯' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/shrug-favicon.jpg' }
