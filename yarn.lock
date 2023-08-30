@@ -86,6 +86,11 @@
     mustache "^2.3.0"
     stack-trace "0.0.10"
 
+"@snyk/protect@^1.1207.0":
+  version "1.1207.0"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1207.0.tgz#1fa34a07987100b43faf94e04aaaaf528b14a437"
+  integrity sha512-ghRa5S8aH8z9I3WGbl4/ISqkNUOmiNLG1XWkN7SyCsd1UZmY0WZDiKMLU1ZQrPQQdrCPyC+jwpRkKwDdfFLVqw==
+
 "@types/strip-bom@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/strip-bom/-/strip-bom-3.0.0.tgz#14a8ec3956c2e81edb7520790aecf21c290aebd2"
