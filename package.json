@@ -11,10 +11,13 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
-    "nuxt": "^1.4.5"
+    "nuxt": "^1.4.5",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.13",
@@ -40,5 +43,6 @@
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
       ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
     }
-  }
+  },
+  "snyk": true
 }
